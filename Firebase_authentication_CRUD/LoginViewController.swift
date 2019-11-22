@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  Firebase_authentication_CRUD
 //
 //  Created by Dipal Patel on 2019-11-21.
@@ -9,21 +9,19 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController {
-
+class LoginViewController: UIViewController {
+    
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var statusText: UITextField!
     
-    var handle: AuthStateDidChangeListenerHandle?
-    var ref: DatabaseReference!
+     var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        ref = Database.database().reference()
-    }
 
+        // Do any additional setup after loading the view.
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
@@ -34,19 +32,18 @@ class ViewController: UIViewController {
         super.viewWillDisappear(animated)
         Auth.auth().removeStateDidChangeListener(handle!)
     }
-
-    //Register User
-    @IBAction func registerUser(_ sender: Any) {
-        Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!) { authResult, error in
-            guard let user = authResult?.user, error == nil else {
-                self.statusText.text = error!.localizedDescription
+    
+    //Login User
+    @IBAction func loginUser(_ sender: Any) {
+        Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { [weak self] authResult, error in
+            //guard let strongSelf = self else { return }
+            if let error = error {
+                self!.statusText.text = error.localizedDescription
                 return
+            } else {
+                self!.statusText.text = "Login Successful"
             }
-            self.statusText.text = "\(user.email!) created"
         }
     }
-    
-   
-    
-}
 
+}
