@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account? Login here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpS-S5-c12">
-                                <rect key="frame" x="20" y="519" width="281" height="21"/>
+                                <rect key="frame" x="30" y="519" width="281" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -77,13 +77,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gX-JF-tUg">
-                                <rect key="frame" x="142" y="548" width="117" height="57"/>
+                                <rect key="frame" x="166" y="573" width="82" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <action selector="registerUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zCO-fv-gdW"/>
-                                    <segue destination="Yox-Eu-Kci" kind="show" id="IWs-el-vyM"/>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LJJ-WA-aVP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,7 +102,7 @@
         <!--Login View Controller-->
         <scene sceneID="Zor-gk-ctZ">
             <objects>
-                <viewController id="Yox-Eu-Kci" customClass="LoginViewController" customModule="Firebase_authentication_CRUD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="LoginViewController" storyboardIdentifier="LoginViewController" id="Yox-Eu-Kci" customClass="LoginViewController" customModule="Firebase_authentication_CRUD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S0X-wf-XAu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,8 +149,6 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginUser:" destination="Yox-Eu-Kci" eventType="touchUpInside" id="Ybz-hU-yrw"/>
-                                    <action selector="registerUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K55-4g-AaZ"/>
-                                    <segue destination="RQw-nx-eOf" kind="show" id="05t-LV-Ufx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPl-R0-krK">
@@ -178,7 +175,7 @@
         <!--View Controller-->
         <scene sceneID="kcg-BH-vum">
             <objects>
-                <viewController id="RQw-nx-eOf" customClass="CRUDViewController" customModule="Firebase_authentication_CRUD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CRUDViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RQw-nx-eOf" customClass="CRUDViewController" customModule="Firebase_authentication_CRUD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="510-rY-8gO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,23 +216,62 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvU-b3-k8J">
-                                <rect key="frame" x="149" y="423" width="117" height="57"/>
+                                <rect key="frame" x="20" y="420" width="102" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Add"/>
+                                <state key="normal" title="Create"/>
                                 <connections>
-                                    <action selector="addData:" destination="RQw-nx-eOf" eventType="touchUpInside" id="8MQ-lN-k1n"/>
-                                    <action selector="loginUser:" destination="Yox-Eu-Kci" eventType="touchUpInside" id="CtS-Eh-ehH"/>
-                                    <action selector="registerUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCW-3j-tOO"/>
+                                    <action selector="createData:" destination="RQw-nx-eOf" eventType="touchUpInside" id="VR0-Zi-yq6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add User data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktk-V8-pP6">
-                                <rect key="frame" x="115" y="65" width="184" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User data :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktk-V8-pP6">
+                                <rect key="frame" x="20" y="65" width="139" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xE-2i-cE6">
+                                <rect key="frame" x="266" y="420" width="128" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Delete All"/>
+                                <connections>
+                                    <action selector="deleteData:" destination="RQw-nx-eOf" eventType="touchUpInside" id="REg-hg-Yj2"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="seU-Pf-ctB">
+                                <rect key="frame" x="20" y="603" width="374" height="259"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erH-Zm-50m">
+                                <rect key="frame" x="277" y="65" width="88" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="RQw-nx-eOf" eventType="touchUpInside" id="2gA-Zl-uaL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="data  retrived from the realtime database :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGl-PL-yQt">
+                                <rect key="frame" x="20" y="563" width="359" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7s-JA-TkB">
+                                <rect key="frame" x="141" y="420" width="103" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateData:" destination="RQw-nx-eOf" eventType="touchUpInside" id="YI7-sb-STK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.95814931671620274" blue="0.70821474669244844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="SdV-sm-Nqe"/>
@@ -243,12 +279,13 @@
                     <connections>
                         <outlet property="ageText" destination="cCX-Zg-Sog" id="P25-ay-1zx"/>
                         <outlet property="nameText" destination="ByM-MY-6n2" id="xCS-k9-2qp"/>
+                        <outlet property="showData" destination="seU-Pf-ctB" id="zgh-ev-F5I"/>
                         <outlet property="statusText" destination="YjG-3e-vgy" id="Khv-Ka-4Cw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2I-oh-WKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1595" y="105"/>
+            <point key="canvasLocation" x="1594.2028985507247" y="104.46428571428571"/>
         </scene>
     </scenes>
 </document>

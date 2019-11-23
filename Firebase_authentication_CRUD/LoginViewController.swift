@@ -42,6 +42,10 @@ class LoginViewController: UIViewController {
                 return
             } else {
                 self!.statusText.text = "Login Successful"
+                if let storyboard = self?.storyboard {
+                    let vc = storyboard.instantiateViewController(withIdentifier: "CRUDViewController") as! CRUDViewController
+                    self!.present(vc, animated: false, completion: nil)
+                }
             }
         }
     }

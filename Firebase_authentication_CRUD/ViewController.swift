@@ -47,6 +47,12 @@ class ViewController: UIViewController {
     }
     
    
+    @IBAction func login(_ sender: Any) {
+        if let storyboard = self.storyboard {
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            self.present(vc, animated: false, completion: nil)
+        }
+    }
     
 }
 

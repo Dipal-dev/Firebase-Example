@@ -16,6 +16,7 @@
 		8E4D98B523870AE3005ABC81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E4D98B423870AE3005ABC81 /* GoogleService-Info.plist */; };
 		8E9870DC23879873001EEC8E /* CRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9870DB23879873001EEC8E /* CRUDViewController.swift */; };
 		8E9D8B53238729D900F5A2F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D8B52238729D900F5A2F6 /* LoginViewController.swift */; };
+		8ECEACAC238884D200CAC99F /* person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEACAB238884D200CAC99F /* person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8E4D98B423870AE3005ABC81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8E9870DB23879873001EEC8E /* CRUDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDViewController.swift; sourceTree = "<group>"; };
 		8E9D8B52238729D900F5A2F6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8ECEACAB238884D200CAC99F /* person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = person.swift; sourceTree = "<group>"; };
 		EBDC2BE8E890F2CB2FB2D72F /* Pods-Firebase_authentication_CRUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase_authentication_CRUD.release.xcconfig"; path = "Target Support Files/Pods-Firebase_authentication_CRUD/Pods-Firebase_authentication_CRUD.release.xcconfig"; sourceTree = "<group>"; };
 		F6A3EB83D0F558479EBF3859 /* Pods-Firebase_authentication_CRUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase_authentication_CRUD.debug.xcconfig"; path = "Target Support Files/Pods-Firebase_authentication_CRUD/Pods-Firebase_authentication_CRUD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 				8E4D98AE23870A39005ABC81 /* Info.plist */,
 				8E9D8B52238729D900F5A2F6 /* LoginViewController.swift */,
 				8E9870DB23879873001EEC8E /* CRUDViewController.swift */,
+				8ECEACAB238884D200CAC99F /* person.swift */,
 			);
 			path = Firebase_authentication_CRUD;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				8E9870DC23879873001EEC8E /* CRUDViewController.swift in Sources */,
 				8E9D8B53238729D900F5A2F6 /* LoginViewController.swift in Sources */,
 				8E4D98A523870A33005ABC81 /* ViewController.swift in Sources */,
+				8ECEACAC238884D200CAC99F /* person.swift in Sources */,
 				8E4D98A323870A33005ABC81 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
